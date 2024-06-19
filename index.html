@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Count Down</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+    
+        html , input , button {
+            font-family: "Vazirmatn" !important;
+            direction: ltr
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+        }
+        .inpt-box {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .inpt-box.active {
+            display: block;
+        }
+
+        .inpt-box #inpt-counter {
+            padding: 7px;
+            width: 300px;
+            outline-color: black;
+            border: 1px solid rgba(0,0,0,.4);
+            border-radius: 2px;
+        }
+
+        .inpt-box #btn-counter {
+            border: none;
+            padding: 7px 10px;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            border-radius: 2px;
+        }
+
+        .msg {
+            margin-top: 10px;
+            font-size: .9em;
+        }
+
+        .msg .wrking {
+            color: #e74c3c;
+            display: none;
+        }
+
+        .msg .done {
+            color: #27ae60;
+            display: none;
+        }
+
+
+        #error-msg {
+            color: #e74c3c;
+            font-size: .9em;
+            display: none;
+        }
+
+        #error-msg.active {
+            display: block;
+        }
+
+        .c100 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inpt-box active">
+            <input type="text" name="" id="inpt-counter" placeholder="Please enter the time in seconds">
+            <button id="btn-counter">Let's go</button>
+        </div>
+        <div id="error-msg">
+            Please enter the time correctly
+        </div>
+        <div class="c100 ">
+            <span class="timer-show"></span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div class="msg">
+            <span class="wrking">in process</span>
+            <span class="done">The counter ended successfully</span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
